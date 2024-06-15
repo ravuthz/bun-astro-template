@@ -1,0 +1,16 @@
+# modules = ["web", "nodejs-20"]
+modules = ["web", "bun-1.1:v1-20240401-269b323"]
+
+# run = "npm run dev --host"
+run = "bun run dev --host"
+
+[nix]
+channel = "stable-23_11"
+
+[deployment]
+# run = ["sh", "-c", "npm run dev"]
+run = ["sh", "-c", "bun run dev"]
+
+[[ports]]
+localPort = 4321
+externalPort = 80
